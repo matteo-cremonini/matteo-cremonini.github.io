@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matteo Cremonini — Backend Developer (Django / DRF)</title>
+  <meta name="description" content="Backend developer building Django and DRF REST APIs. EU citizen, relocating to Maastricht (NL), open to remote EU work. CET timezone.">
+
+  <meta property="og:title" content="Matteo Cremonini — Backend Developer (Django / DRF)">
+  <meta property="og:description" content="Django/DRF REST APIs, tested and deployed. Open to remote EU work.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a href="#" class="nav-brand">matteo<span class="accent">.</span>cremonini</a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/matteo-cremonini" class="nav-cta">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <p class="eyebrow">// backend developer · django · drf</p>
+      <h1>Matteo Cremonini</h1>
+      <p class="lead">I build Django and DRF REST APIs that ship to production — authentication, multi-tenant data, and concurrency-safe booking flows.</p>
+
+      <div class="pills">
+        <span class="pill">EU citizen</span>
+        <span class="pill">CET timezone</span>
+        <span class="pill pill-accent">Open to remote · NL/BE</span>
+      </div>
+
+      <pre class="code" aria-label="Developer profile as an API response"><span class="c-dim">GET</span> <span class="c-key">/api/developer/matteo</span>
+
+<span class="c-ok">200 OK</span>
+{
+  <span class="c-key">"role"</span>: <span class="c-str">"Backend Developer"</span>,
+  <span class="c-key">"stack"</span>: <span class="c-str">["Python", "Django", "DRF", "PostgreSQL", "Docker"]</span>,
+  <span class="c-key">"based_in"</span>: <span class="c-str">"Italy &#8594; Maastricht, NL (Oct 2026)"</span>,
+  <span class="c-key">"available"</span>: <span class="c-ok">true</span>
+}</pre>
+
+      <div class="hero-cta">
+        <a href="#work" class="btn btn-primary">View projects</a>
+        <a href="https://github.com/matteo-cremonini" class="btn">GitHub</a>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <p class="section-label">// selected work</p>
+      <h2>Projects</h2>
+
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-head">
+            <h3>booking-api</h3>
+            <span class="badge-live">live</span>
+          </div>
+          <p class="card-desc">Multi-tenant booking platform. A full REST API and an htmx web frontend running on one Django project.</p>
+          <ul class="tech">
+            <li>Django</li><li>DRF</li><li>PostgreSQL</li><li>Docker</li><li>htmx</li>
+          </ul>
+          <p class="metrics">31 tests · JWT auth · concurrency-safe (select_for_update)</p>
+          <div class="card-links">
+            <a href="https://booking-api-production-51cd.up.railway.app" class="btn btn-sm">Live demo</a>
+            <a href="https://github.com/matteo-cremonini/booking-api" class="btn btn-sm btn-ghost">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>task-manager-api</h3>
+            <span class="badge-live">live</span>
+          </div>
+          <p class="card-desc">Task management REST API with JWT authentication, role-based access control, and full automated test coverage.</p>
+          <ul class="tech">
+            <li>Django</li><li>DRF</li><li>SimpleJWT</li><li>Docker</li>
+          </ul>
+          <p class="metrics">17 tests · deployed on Railway</p>
+          <div class="card-links">
+            <a href="https://web-production-dda72.up.railway.app" class="btn btn-sm">Live demo</a>
+            <a href="https://github.com/matteo-cremonini/task-manager-api" class="btn btn-sm btn-ghost">Code</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="stack" class="section">
+      <p class="section-label">// stack</p>
+      <h2>Tools I work with</h2>
+      <ul class="stack-list">
+        <li>Python</li><li>Django</li><li>DRF</li><li>PostgreSQL</li><li>Docker</li>
+        <li>JWT</li><li>htmx</li><li>Nginx</li><li>Railway</li><li>pytest</li><li>Git</li>
+      </ul>
+    </section>
+
+    <section id="about" class="section">
+      <p class="section-label">// about</p>
+      <h2>Who I am</h2>
+      <p class="about-text">Italian backend developer focused on Python and Django. I build tested, production-ready REST APIs and deploy them live. Relocating to Maastricht (NL) in October 2026 — EU citizen, no visa or sponsorship required, available for remote EU work now and on-site from October.</p>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <p class="section-label">// contact</p>
+      <h2>Let's talk</h2>
+      <p class="about-text">Open to remote EU opportunities — freelance or full-time. CET timezone.</p>
+      <div class="contact-links">
+        <a href="mailto:mcrema999@outlook.it" class="btn btn-primary">Email me</a>
+        <a href="https://github.com/matteo-cremonini" class="btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/matteo-cremonini" class="btn">LinkedIn</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Matteo Cremonini · Built with HTML &amp; CSS</p>
+  </footer>
+
+</body>
+</html>
