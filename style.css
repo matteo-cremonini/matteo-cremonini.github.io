@@ -61,6 +61,7 @@ section[id] { scroll-margin-top: 80px; }
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
   align-items: center;
   font-size: 14px;
@@ -359,8 +360,8 @@ main {
 .cv-langs { font-size: 13.5px; color: var(--text); }
 
 @media (max-width: 600px) {
-  .nav { padding: 1.2rem; }
-  .nav-links { gap: 1rem; font-size: 13px; }
+  .nav-inner { flex-direction: column; align-items: flex-start; gap: 0.8rem; padding: 0.9rem 1.3rem; }
+  .nav-links { gap: 0.9rem 1.1rem; font-size: 13px; }
   .hero { padding: 2.5rem 0 2rem; }
   .code { font-size: 12px; padding: 1rem; }
   .section { padding: 2.5rem 0; }
