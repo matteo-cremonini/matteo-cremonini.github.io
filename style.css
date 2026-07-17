@@ -233,6 +233,42 @@ main {
   color: var(--ok);
 }
 
+.badge-maint {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: rgba(248, 113, 113, 0.12);
+  color: #f87171;
+}
+
+.btn-disabled {
+  color: var(--muted);
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.maint-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #f2b8b8;
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.28);
+  border-radius: var(--radius);
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1.6rem;
+}
+.maint-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f87171;
+  flex-shrink: 0;
+}
+
 .card-desc { font-size: 14.5px; color: var(--muted); margin-bottom: 1rem; }
 
 .tech {
