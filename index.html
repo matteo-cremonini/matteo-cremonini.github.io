@@ -232,8 +232,45 @@
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePanel(); });
     })();
   </script>
-  <script data-goatcounter="https://matteo-cremonini.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+  <!-- Analytics: GoatCounter (privacy-friendly, no cookies) -->
+<script data-goatcounter="https://matteo-cremonini.goatcounter.com/count"
+      async src="//gc.zgo.at/count.js"></script>
+<script>
+  (function () {
+    // Send an event to GoatCounter, only if its script has finished loading.
+    function track(name, title) {
+      if (window.goatcounter && window.goatcounter.count) {
+        window.goatcounter.count({ path: name, title: title, event: true });
+      }
+    }
 
+    // Map a link to an event name. Specific checks come before generic ones.
+    function eventFor(href) {
+      if (href.indexOf('booking-api-production') !== -1) {
+        return href.indexOf('/api/') !== -1 ? 'booking-api-live-api' : 'booking-api-live-demo';
+      }
+      if (href.indexOf('web-production-dda72') !== -1) return 'task-manager-api-live-api';
+      if (href.indexOf('github.com/matteo-cremonini/booking-api') !== -1) return 'booking-api-code';
+      if (href.indexOf('github.com/matteo-cremonini/task-manager-api') !== -1) return 'task-manager-api-code';
+      if (href.indexOf('cv.pdf') !== -1) return 'cv-download';
+      if (href.indexOf('mailto:') === 0) return 'email-click';
+      if (href.indexOf('linkedin.com') !== -1) return 'linkedin-click';
+      if (href.indexOf('github.com/matteo-cremonini') !== -1) return 'github-profile';
+      return null;
+    }
+
+    // One listener for the whole page: catches every click, then decides what to track.
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('#cvToggle')) {
+        track('cv-opened', 'CV panel opened');
+        return;
+      }
+      var link = e.target.closest('a[href]');
+      if (!link) return;
+      var name = eventFor(link.getAttribute('href'));
+      if (name) track(name, link.textContent.trim());
+    });
+  })();
+</script>
 </body>
 </html>
